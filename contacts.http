@@ -1,0 +1,24 @@
+### Obteniendo todos los datos
+GET http://localhost:3000
+
+
+### Insertando datos
+POST http://localhost:3000/add
+Content-Type: application/json
+
+{
+    "name": "David Barajas",
+    "number": 156465
+}
+
+### ACTUALIZANDO DATOS
+PUT http://localhost:3000/edit/1
+Content-Type: application/json
+
+{
+    "name": "Jhossmer",
+    "number": 156465
+}
+
+### Eliminar Contacto
+DELETE http://localhost:3000/1

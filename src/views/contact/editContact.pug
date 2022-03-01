@@ -1,0 +1,22 @@
+extends ../layouts/index.pug
+
+block content 
+    each contact in rows
+        div(class="mx-auto col-md-5 text-center")
+            div(class="card my-5")
+                div(class="card-header")
+                    h1(class="mt-5") Editar Contacto 
+                    
+                form(action=`/contact/edit/${contact.id}` method="POST" class="card-body")
+                    div(class="form-group")
+                        input(name="name" value=`${contact.name}` class="form-control")
+                    
+                    br
+
+                    div(class="form-group")
+                        input(name="number" type="number" value=`${contact.number}` class="form-control")
+                    
+                    br
+
+                    div(class="form-group")
+                        input(type="submit" value="Guardar" class="btn btn-primary btn-block")

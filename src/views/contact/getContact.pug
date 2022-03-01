@@ -1,0 +1,15 @@
+extends ../layouts/index.pug
+
+block content 
+
+    div(class="mx-auto col-md-5 text-center")
+        h1(class="mt-5") APP CONTACTS 
+        a(href="/contact/add") Agregar Contacto
+        each contact in rows
+            div(class="card my-5")
+                div(class="card-body") 
+                        h3(class="card-title")= contact.name
+                        p= contact.number
+                div(class="card-footer")
+                    a(href=`/contact/edit/${contact.id}` class="btn btn-warning") Editar
+                    a(href=`/contact/delete/${contact.id}` class="btn btn-danger") Eliminar

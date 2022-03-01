@@ -1,0 +1,22 @@
+extends ../layouts/index.pug
+
+block content 
+
+    div(class="mx-auto col-md-5 text-center")
+        div(class="card my-5")
+            div(class="card-header")
+                h1(class="mt-5") Agregr Contacto 
+                
+            form(action="/contact/add" method="POST" class="card-body")
+                div(class="form-group")
+                    input(name="name" placeholder="Nomber" class="form-control")
+                
+                br
+
+                div(class="form-group")
+                    input(name="number" type="number" placeholder="Número" class="form-control")
+                
+                br
+
+                div(class="form-group")
+                    input(type="submit" value="Guardar" class="btn btn-primary btn-block")
